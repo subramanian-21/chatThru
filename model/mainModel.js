@@ -28,7 +28,19 @@ const mainSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true
-    }
+    },
+
+    propic:{
+        type:String,
+        default:''
+    },
+
+    followers:[{
+        type:mongoose.Types.ObjectId,ref:'user'
+    }],
+    following:[{
+        type:mongoose.Types.ObjectId,ref:'user'
+    }]
 
 },{
     timestamps:true

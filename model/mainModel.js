@@ -30,4 +30,8 @@ const mainSchema = new mongoose.Schema({
         required:true
     }
 
+},{
+    timestamps:true
 })
+
+module.exports = mongoose.model('user',mainSchema)

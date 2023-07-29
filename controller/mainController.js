@@ -22,13 +22,25 @@ const mainController = {
             if(password.length < 8){
                 return res.status(400).json({message:"Password must be more than 8 characters..."})
             }
-            const newUser = new m
-            ainModel({
+            const newUser = new mainModel({
                 firstname,lastname,username,email,password
             })
+            const access_token = newAccessToken({id:newUser._id})
+            await newUser.save()
+
+            res.json({
+                message:"Registration complete...",
+                access_token,
+                user:{
+                    ...newUser._doc
+                }
+            })
         }
-        catch{
-        
+
+        catch (err){
+            return res.status(500).json({
+                message:err.message
+            })
         }
     }
     

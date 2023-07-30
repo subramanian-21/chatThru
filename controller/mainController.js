@@ -2,7 +2,7 @@ const mainModel = require('../model/mainModel')
 const MainSchema = require('../model/mainModel')
 
 const newAccessToken = (user) =>{
-    return jwt.sign(user,process.env.ACCESS_TOKEN,{expire : '1d'})
+    return jwt.sign(user,process.env.ACCESS_TOKEN,{expiresIn : '1d'})
 }
 
 const mainController = {
@@ -43,6 +43,8 @@ const mainController = {
             })
         }
     }
+
+
     
 }
 

@@ -1,16 +1,203 @@
 // login
 $background-color:#1e2029;
-$font1:#cccccc;
+$font-color:#cccccc;
 $h1:40px;
+$bold:1000;
+$medium:800;
+$light:600;
+
+.h1{
+    font-size: $h1;
+    font-weight: bold;
+}
+
+.white{
+    color: $font-color;
+}
+.black{
+    color: black;
+}
 
 .login-body{
 width: 100%;
 height: 100vh;
 background-color: $background-color;
-color: $font1;
-font-size: $h1;
+
+}
+.main{
+    display: flex;
+    height: 100%;
+}
+.right{
+    flex: 1;
+}
+.left{
+    
+}
+.left,.right{
+    outline: 1px solid $font-color;
+}
+.login-box{
+    background-color: rgb(9, 126, 228);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.inputs{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.input-out{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.inp{
+    width: 100%;
+    border: 0;
+    height: 2.7rem;
+}
+.primary-btn{
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border:0;
+    border-radius: 2px;
+    font-weight: 500;
+    background:#f96816;
+    color:#fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
 }
 
+
+.loginbody{
+    width: 100%;  
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginbox {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 1);
+    color: #000;
+    border-radius: 9px;
+    box-shadow: -21px -39px 255px -115px rgba(0,0,0,0.45),
+  25px 0px 20px -20px rgba(0,0,0,0.45),
+  0px 25px 20px -20px rgba(0,0,0,0.45),
+  -25px 0px 20px -20px rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  }
+  
+  .logo{
+  
+    font-size: 40px;
+    font-style: italic;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .logo:hover{
+    text-decoration: none;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .forgot{
+    color: rgb(18, 146, 226);
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .forgot:hover{
+    color: darkblue;
+  }
+  .inp{
+    width: 80%;
+    height: 40px;
+    margin-top: 10px ;
+    border-radius: 5px;
+    border: 0.5px solid ;
+    font-size: 100%;
+    font-weight: 600;
+  
+  }
+  #sub{
+    background-color: rgb(4, 152, 245);
+   
+  }
+  #sub:hover{
+    box-shadow:  5px 5px 8px 0px #e0e0e0;
+  }
+  #dont{
+    font-weight: 600;
+  }
+  
+  #passwd{
+    position: relative;
+  }
+  .pass{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .sh{
+    position: absolute;
+    right: 45px;
+    top:18px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  
+  .signbody{
+    width: 100%;  
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .signbox{
+    width: 400px;
+    height: 600px; 
+     background-color: rgba(255, 255, 255, 1);
+    color: #000;
+    border-radius: 9px;
+    box-shadow: -21px -39px 255px -115px rgba(0,0,0,0.45),
+  25px 0px 20px -20px rgba(0,0,0,0.45),
+  0px 25px 20px -20px rgba(0,0,0,0.45),
+  -25px 0px 20px -20px rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  }
 // black: {
 //     100: "#ffffff",
 //     200: "#ffffff",

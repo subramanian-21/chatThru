@@ -205,6 +205,7 @@ justify-content: space-evenly;
 
 .logo:hover{
   text-decoration: none;
+  animation: colorchange 3s linear infinite;
 }
 form{
   display: flex;
@@ -351,3 +352,53 @@ justify-content: space-evenly;
 .sseerr{
   width: 60%;
 }
+
+@keyframes colorchange {
+  0%{
+    color: #fff;
+  }
+  10%{
+    color: #cdeafd;
+  }
+  20%{
+    color: #9bd6fb;
+  }
+  30%{
+    color: #68c1f9;
+  }
+  40%{
+    color: #36adf7;
+  }
+  50%{
+    color: #0498f5;
+  }
+  60%{
+    color: #037ac4;
+  }
+  70%{
+    color: #025b93;
+  }
+  80%{
+    color: #023d62;
+  }
+  90%{
+    color: #011e31;
+  }
+  100%{
+    color: black;
+  }
+  
+}
+
+
+/* black: {
+       100: "#cdeafd",
+       200: "#9bd6fb",
+       300: "#68c1f9",
+       400: "#36adf7",
+       500: "#0498f5",
+       600: "#037ac4",
+       700: "#025b93",
+       800: "#023d62",
+       900: "#011e31"
+}, */

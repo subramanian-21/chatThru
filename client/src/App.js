@@ -70,6 +70,7 @@ function App() {
 
   return (
     <Router>
+      <Route path="/dev" component={Login}/>
       <Alert />
 
       <input type="checkbox" id="theme" />

@@ -26,7 +26,7 @@ function Login() {
             <input className="inp border-1"  placeholder='Enter Passwd...' name="password" />
 
             <small className="sh" >
-
+                
             </small>
         </div>
        
@@ -37,7 +37,7 @@ function Login() {
 
    </form>
    <p className="my-2">
-        Don't have an account? <a id='dont'><Link to="/register">Register</Link></a>
+        Don't have an account? <Link className="a" to="/register">Register</Link>
     </p></div>
 
 </div>)

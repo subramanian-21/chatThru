@@ -1,45 +1,77 @@
-import { Link } from "react-router-dom"
-import "./pages.css"
-function Login() {
-    return( <div className="loginbody">
+import React, { useState, useEffect } from 'react'
+import { Link, useHistory } from 'react-router-dom'
+import { login } from '../redux/actions/authAction'
+import { useDispatch, useSelector } from 'react-redux'
+
+
+const Login = () => {
+    const initialState = { email: '', password: '' }
+    const [userData, setUserData] = useState(initialState)
+    const { email, password } = userData
+
+    const [typePass, setTypePass] = useState(false)
+
+    const { auth } = useSelector(state => state)
+    const dispatch = useDispatch()
+    const history = useHistory()
+
+    useEffect(() => {
+        if(auth.token) history.push("/")
+    }, [auth.token, history])
+
+    const handleChangeInput = e => {
+        const { name, value } = e.target
+        setUserData({...userData, [name]:value})
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        dispatch(login(userData))
+    }
+
+    return (
+        <div className="loginbody">
          
 
-    <div className='loginbox'>
+                <div className='loginbox'>
 
 
-    <div className="logo">
-        
-        <div className="logo-name">ChatThru</div></div>
-    <form>
-   
-        
-        <input type="email" className="inp border-1" id="exampleInputEmail1" name="email"
-        aria-describedby="emailHelp" placeholder = "Enter your Email..." />
-        
-   
+                <h3 className="logo">ChatThru</h3>
+                <form onSubmit={handleSubmit}>
+               
+                    
+                    <input type="email" className="inp" id="exampleInputEmail1" name="email"
+                    aria-describedby="emailHelp" placeholder = "Enter your Email..." onChange={handleChangeInput} value={email} />
+                    
+               
 
-  
-       
+              
+                   
 
-        <div className="pass" id='passwd'>
-            
-            <input className="inp border-1"  placeholder='Enter Passwd...' name="password" />
+                    <div className="pass" id='passwd'>
+                        
+                        <input type={ typePass ? "text" : "password" } 
+                        className="inp"  placeholder='Enter Passwd...' 
+                        onChange={handleChangeInput} value={password} name="password" />
 
-            <small className="sh" >
+                        <small className="sh" onClick={() => setTypePass(!typePass)}>
+                            {typePass ? 'Hide' : 'Show'} 
+                        </small>
+                    </div>
+                   
                 
-            </small>
+                <button type="submit" className="inp" id='sub'
+                disabled={email && password ? false : true}>
+                    Login
+                </button>
+
+               </form>
+               <p className="my-2">
+                    Don't have an account? <a id='dont'><Link to="/register">Register Now</Link></a>
+                </p></div>
+            
         </div>
-       
-    
-    <button type="submit" className="inp" id='sub'>
-        Login
-    </button>
-
-   </form>
-   <p className="my-2">
-        Don't have an account? <Link className="a" to="/register">Register</Link>
-    </p></div>
-
-</div>)
+    )
 }
+
 export default Login

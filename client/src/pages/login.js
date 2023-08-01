@@ -1,4 +1,5 @@
-import "./pages.scss"
+import { Link } from "react-router-dom"
+import "./pages.css"
 function Login() {
     return( <div className="loginbody">
          
@@ -6,11 +7,13 @@ function Login() {
     <div className='loginbox'>
 
 
-    <h3 className="logo">ChatThru</h3>
+    <div className="logo">
+        <div className="logo-img"></div>
+        <div className="logo-name">ChatThru</div></div>
     <form>
    
         
-        <input type="email" className="inp" id="exampleInputEmail1" name="email"
+        <input type="email" className="inp border-1" id="exampleInputEmail1" name="email"
         aria-describedby="emailHelp" placeholder = "Enter your Email..." />
         
    
@@ -20,9 +23,7 @@ function Login() {
 
         <div className="pass" id='passwd'>
             
-            <input 
-            className="inp"  placeholder='Enter Passwd...' 
-            name="password" />
+            <input className="inp border-1"  placeholder='Enter Passwd...' name="password" />
 
             <small className="sh" >
 
@@ -36,7 +37,7 @@ function Login() {
 
    </form>
    <p className="my-2">
-        Don't have an account? <a id='dont'></a>
+        Don't have an account? <a id='dont'><Link to="/register">Register</Link></a>
     </p></div>
 
 </div>)

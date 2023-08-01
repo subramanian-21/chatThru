@@ -1,4 +1,4 @@
-import "./pages.scss"
+import "./pages.css"
 function home(){
     return(<></>)
 }

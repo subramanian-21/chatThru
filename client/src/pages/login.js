@@ -1,7 +1,7 @@
 import "./pages.scss"
-function login() {
-    return(<div className="body">
-
+function Login() {
+    return(<div className="login-body">
+<div className="h1">Login Page</div>
     </div>)
 }
-export default login
+export default Login

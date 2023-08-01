@@ -129,18 +129,54 @@ form {
 }
 @keyframes colorchange {
   0% {
-    color: red;
+    color: #cdeafd;
+    
   }
   25% {
-    color: blue;
+    color: #68c1f9;
   }
   50% {
-    color: yellow;
+    color: #0498f5;
   }
   75% {
-    color: green;
+    color: #025b93;
   }
   100% {
-    color: pink;
+    color:#011e31;
   }
 }
+@keyframes backgroundcolorchange {
+  0% {
+    background-color: #011e31;
+    color: #cdeafd;
+    
+  }
+  25% {
+    background-color:#025b93 ;
+    color: #68c1f9;
+  }
+  50% {
+    background-color: #0498f5;
+    color: #0498f5;
+  }
+  75% {
+    background-color: #68c1f9;
+    color: #025b93;
+  }
+  100% {
+    background-color: #cdeafd;
+    color:#011e31;
+  }
+}
+
+/* black {
+    100: "#cdeafd",
+    200: "#9bd6fb",
+    300: "#68c1f9",
+    400: "#36adf7",
+    500: "#0498f5",
+    600: "#037ac4",
+    700: "#025b93",
+    800: "#023d62",
+    900: "#011e31"
+} */

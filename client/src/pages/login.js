@@ -8,7 +8,7 @@ function Login() {
 
 
     <div className="logo">
-        <div className="logo-img"></div>
+        
         <div className="logo-name">ChatThru</div></div>
     <form>
    
